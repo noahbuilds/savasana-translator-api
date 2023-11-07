@@ -26,7 +26,7 @@ Translation API is a RESTful API built with NestJS that provides access to word 
 
 Before you start using the API, make sure you have the following prerequisites installed:
 
-- Node.js (version X.X.X)
+- Node.js (version >= 16.14.0)
 
 - npm (Node Package Manager) or yarn
 
