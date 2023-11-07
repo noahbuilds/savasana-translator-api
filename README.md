@@ -1,4 +1,4 @@
-# Your NestJS API
+# Translation NestJS API
 
 Translation API is a RESTful API built with NestJS that provides access to word translations.
 
