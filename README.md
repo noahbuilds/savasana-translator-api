@@ -1,73 +1,152 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Your NestJS API
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Your NestJS API is a RESTful API built with NestJS that provides access to [briefly describe what your API does].
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Table of Contents
 
-## Description
+- [Getting Started](#getting-started)
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+- [Prerequisites](#prerequisites)
 
-## Installation
+- [Installation](#installation)
+
+- [Configuration](#configuration)
+
+- [Usage](#usage)
+
+- [Endpoints](#endpoints)
+
+- [Authentication](#authentication)
+
+- [Request/Response Format](#requestresponse-format)
+
+- [Example Requests](#example-requests)
+
+- [Example Responses](#example-responses)
+
+- [Error Handling](#error-handling)
+
+- [Documentation](#documentation)
+
+- [Contributing](#contributing)
+
+- [License](#license)
+
+## Getting Started
+
+### Prerequisites
+
+Before you start using the API, make sure you have the following prerequisites installed:
+
+- Node.js (version X.X.X)
+
+- npm (Node Package Manager) or yarn
+
+### Installation
+
+1. Clone the repository:
 
 ```bash
-$ yarn install
+
+git clone https://github.com/your/repo.git
+
 ```
 
-## Running the app
+**Install dependencies:**
 
-```bash
-# development
-$ yarn run start
+    cd your-api-directory
 
-# watch mode
-$ yarn run start:dev
+    npm install
 
-# production mode
-$ yarn run start:prod
-```
+**Configuration**
 
-## Test
+Copy the _.env.example_ file to .env and configure the environment variables needed for your NestJS API. Make sure to set values for:
 
-```bash
-# unit tests
-$ yarn run test
+- DATABASE_URL: URL to your database.
+- (Add any other configuration variables specific to your API)
 
-# e2e tests
-$ yarn run test:e2e
+# Usage
 
-# test coverage
-$ yarn run test:cov
-```
+**Endpoints**
 
-## Support
+Your NestJS API provides the following endpoints:
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+- **POST** /translation/api/v1/create: Create a new translation.
 
-## Stay in touch
+- **GET** /translation/api/v1/translate/:word: Find a translation by word and language.
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+- **PATCH** /translation/api/v1/update/:id: Update an existing translation.
 
-## License
+- **DELETE** /translation/api/v1/delete/:id: Delete a translation.
 
-Nest is [MIT licensed](LICENSE).
+## POST /translation/api/v1/create
+
+This endpoint allows you to create a new translation.
+
+Example Request:
+
+    POST /translation/api/v1/create
+
+    Content-Type: application/json
+
+
+    {
+
+    "word": "example_word",
+
+    "language_code": "en",
+
+    "translation": "example_translation"
+
+    }
+
+## GET /translation/api/v1/translate/:word
+
+This endpoint allows you to find a translation by word and language.
+
+Example Request:
+
+    GET /translation/api/v1/translate/example_word?lang=en
+
+## PATCH /translation/api/v1/update/:id
+
+This endpoint allows you to update an existing translation.
+
+Example Request:
+
+    PATCH /translation/api/v1/update/123
+
+    Content-Type: application/json
+
+
+    {
+
+    "word": "updated_word",
+
+    "language_code": "en",
+
+    "translation": "updated_translation"
+
+    }
+
+## DELETE /translation/api/v1/delete/:id
+
+This endpoint allows you to delete a translation by ID.
+
+Example Request:
+
+    DELETE /translation/api/v1/delete/123
+
+## Error Handling
+
+The API may return error responses with relevant HTTP status codes and error messages. For details on error responses, refer to the Error Handling section.
+
+**Documentation**
+
+The API documentation is available via Swagger at:
+
+    http://your-api-url/docs
+
+You can explore the available endpoints, see example requests and responses, and test the API interactively using Swagger.
+
+Happy Coding👩‍💻

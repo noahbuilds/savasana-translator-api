@@ -6,6 +6,9 @@ import { ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
+  app.enableCors({
+    allowedHeaders: '*',
+  });
   const options = new DocumentBuilder()
     .setTitle('SAVASANA TRANSLATOR API')
     .setDescription('')
