@@ -1,6 +1,6 @@
 # Your NestJS API
 
-Your NestJS API is a RESTful API built with NestJS that provides access to [briefly describe what your API does].
+Translation API is a RESTful API built with NestJS that provides access to word translations.
 
 ## Table of Contents
 
@@ -16,21 +16,9 @@ Your NestJS API is a RESTful API built with NestJS that provides access to [brie
 
 - [Endpoints](#endpoints)
 
-- [Authentication](#authentication)
-
-- [Request/Response Format](#requestresponse-format)
-
-- [Example Requests](#example-requests)
-
-- [Example Responses](#example-responses)
-
 - [Error Handling](#error-handling)
 
 - [Documentation](#documentation)
-
-- [Contributing](#contributing)
-
-- [License](#license)
 
 ## Getting Started
 
@@ -67,7 +55,7 @@ Copy the _.env.example_ file to .env and configure the environment variables nee
 
 # Usage
 
-**Endpoints**
+# **Endpoints**
 
 Your NestJS API provides the following endpoints:
 
@@ -83,7 +71,7 @@ Your NestJS API provides the following endpoints:
 
 This endpoint allows you to create a new translation.
 
-Example Request:
+# Example Request:
 
     POST /translation/api/v1/create
 
@@ -112,7 +100,7 @@ Example Request:
 
 This endpoint allows you to update an existing translation.
 
-Example Request:
+# Example Request:
 
     PATCH /translation/api/v1/update/123
 
@@ -137,11 +125,11 @@ Example Request:
 
     DELETE /translation/api/v1/delete/123
 
-## Error Handling
+# Error Handling
 
 The API may return error responses with relevant HTTP status codes and error messages. For details on error responses, refer to the Error Handling section.
 
-**Documentation**
+# **Documentation**
 
 The API documentation is available via Swagger at:
 
