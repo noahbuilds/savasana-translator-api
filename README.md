@@ -133,7 +133,7 @@ The API may return error responses with relevant HTTP status codes and error mes
 
 The API documentation is available via Swagger at:
 
-    http://your-api-url/docs
+    http://your-api-url/api
 
 You can explore the available endpoints, see example requests and responses, and test the API interactively using Swagger.
 
