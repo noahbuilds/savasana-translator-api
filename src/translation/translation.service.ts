@@ -94,7 +94,6 @@ export class TranslationService {
       word: Trimmer(updateTranslationDto.word),
       language_code: Trimmer(updateTranslationDto.language_code),
       translation: updateTranslationDto.translation,
-      // Add other fields you want to update
     };
 
     const updatedTranslation = await this.translationModel.findByIdAndUpdate(
